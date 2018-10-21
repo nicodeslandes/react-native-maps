@@ -278,6 +278,11 @@ declare module "react-native-maps" {
          * __Android only__
          */
         animateMarkerToCoordinate(coordinate: LatLng, duration?: number): void;
+        /**
+         * Causes a redraw of the marker. Useful when there are updates to the marker
+         * and tracksViewChanges comes with a cost that is too high.
+         */
+        redraw(): void;
     }
 
     export class MarkerAnimated extends Marker {
